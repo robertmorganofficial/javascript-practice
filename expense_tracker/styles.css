@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans Extrabold", sans-serif;
+}
+
+.title-container{
+    background-color: lightgrey;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+#header{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.balance-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#addIncome{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 115px;
+    height: 25px;
+}
+
+#addExpense{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 115px;
+    height: 25px;
+}

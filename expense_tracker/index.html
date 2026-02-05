@@ -4,19 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="title-container">
-        <h1>Budget Tracker</h1>
+        <h1 id="header">Budget Tracker</h1>
     </div>
 
     <div class="balance-container">
-        <p id="currentBalanceLabel">Current Balance:<p>
-        <p id="currentBalanceNumber">$<p>
+        <p id="currentBalanceLabel">Current Balance:</p>
+        <p id="currentBalanceNumber">$</p>
             <div class="button-container">
                 <button type="button" id="addIncome"> Add Income</button>
                 <button type="button" id="addExpense"> Add Expense</button>
             </div>
+    </div>
+
+    <div class="details-container">
+        <form>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount">
+
+            <label for="description">Description: </label>
+            <input type="text" id="description" name="description">
+
+            <label for="category">Category: </label>
+            <select id="category" name="category">
+                <option value="income">Income</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="gas">Gas</option>
+            </select>
+            <input type="submit" value="Submit">
+       <form>
     </div>
     
 </body>
