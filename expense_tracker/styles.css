@@ -4,40 +4,105 @@ body {
   font-family: "Gill Sans Extrabold", sans-serif;
 }
 
-.title-container{
-    background-color: lightgrey;
-    width: 100%;
-    border-bottom: 1px solid black;
+.title-container {
+  background-color: lightgrey;
+  width: 100%;
+  border-bottom: 1px solid black;
 }
 
-#header{
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+#header {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
 }
 
-.balance-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-#addIncome{
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    width: 115px;
-    height: 25px;
+#currentBalanceNumber {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-#addExpense{
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    width: 115px;
-    height: 25px;
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#addIncome {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 115px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#addIncome:hover {
+  background-color: darkgreen;
+}
+
+#addExpense {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 115px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#addExpense:hover {
+  background-color: darkred;
+}
+
+.details-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
 }
