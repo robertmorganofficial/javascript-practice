@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="title-container">
         <h1 id="header">Budget Tracker</h1>
@@ -13,7 +15,7 @@
 
     <div class="balance-container">
         <p id="currentBalanceLabel">Current Balance:</p>
-        <p id="currentBalanceNumber">$1000</p>
+        <p id="currentBalanceNumber">$0</p>
         <div class="button-container">
             <button type="button" id="addIncome">Add Income</button>
             <button type="button" id="addExpense">Add Expense</button>
@@ -34,10 +36,19 @@
                 <option value="entertainment">Entertainment</option>
                 <option value="gas">Gas</option>
             </select>
-            <input type="submit" value="Submit">
+            <input type="submit" id="submitButton" value="Submit">
         </form>
     </div>
-    
+
+    <div class="transactionlist-container">
+        <p id="transactionTitle">Recent Transactions</p>
+        <ul id="transactionList">
+
+        </ul>
+
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

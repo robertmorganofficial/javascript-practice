@@ -66,17 +66,18 @@ body {
 }
 
 .details-container {
-  max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-bottom: 1px solid black;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 label {
@@ -105,4 +106,10 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #555;
+}
+
+#transactionTitle {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
 }
