@@ -22,7 +22,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  border-bottom: 1px solid black;
 }
 
 #currentBalanceNumber {
@@ -32,9 +33,37 @@ body {
 }
 
 .button-container {
-  display: flex;
-  gap: 10px;
   margin-top: 15px;
+}
+
+
+
+.details-container {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
 }
 
 #addIncome {
@@ -65,47 +94,43 @@ body {
   background-color: darkred;
 }
 
-.details-container {
-  margin: 20px auto;
-  padding: 20px;
-  border-bottom: 1px solid black;
-}
-
-form {
+.update-balance-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
-  text-align: center;
-  margin: 0 auto;
+  align-items: center;
+  margin-top: 15px;
+  padding: 0 20px;
 }
 
-label {
-  font-weight: bold;
-  margin-top: 5px;
+.update-balance-group label {
+  margin-top: 0;
+  margin-bottom: 8px;
+  white-space: nowrap;
 }
 
-input[type="text"],
-input[type="number"],
-select {
+.update-balance-group input[type="number"] {
+  flex: 1;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
   font-family: inherit;
 }
 
-input[type="submit"] {
-  background-color: #333;
+#updateBalance {
+  background-color: #3b82f6;
   color: white;
-  padding: 10px;
   border: none;
   border-radius: 3px;
+  padding: 8px 16px;
   cursor: pointer;
-  margin-top: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
-input[type="submit"]:hover {
-  background-color: #555;
+#updateBalance:hover {
+  background-color: #2563eb;
 }
 
 #transactionTitle {

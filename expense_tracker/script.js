@@ -4,23 +4,24 @@ const addExpense = document.getElementById("addExpense");
 const amount = document.getElementById("amount");
 const description = document.getElementById("description");
 const category = document.getElementById("category");
-const submitButton = document.getElementById("submitButton");
 const transactionList = document.getElementById("transactionList");
-
+const balanceAmount = document.getElementById("balanceAmount");
+const updateBalance = document.getElementById("updateBalance");
+let currentBalance = 0;
 const listArray = [];
 
-submitButton.addEventListener("click", function (e) {
+updateBalance.addEventListener("click", function (d) {
+    d.preventDefault();
+    const balanceAmountValue = Number(balanceAmount.value);
+    currentBalance = balanceAmountValue;
+    currentBalanceNumber.textContent = "$" + `${currentBalance}`;
+})
+
+addIncome.addEventListener("click", function (e) {
     e.preventDefault();
-
-    const amount = document.getElementById("amount");
     const amountValue = amount.value;
-
-    const description = document.getElementById("description");
     const descriptionValue = description.value;
-
-    const category = document.getElementById("category");
     const categoryValue = category.value;
-
 
 
     console.log(amountValue);
