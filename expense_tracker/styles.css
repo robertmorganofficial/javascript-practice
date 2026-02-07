@@ -94,7 +94,7 @@ select {
   background-color: darkred;
 }
 
-.update-balance-group {
+.updateBalanceGroup {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -103,13 +103,13 @@ select {
   padding: 0 20px;
 }
 
-.update-balance-group label {
+.updateBalanceGroup label {
   margin-top: 0;
   margin-bottom: 8px;
   white-space: nowrap;
 }
 
-.update-balance-group input[type="number"] {
+.updateBalanceGroup input[type="number"] {
   flex: 1;
   padding: 8px;
   border: 1px solid #ccc;

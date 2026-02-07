@@ -7,6 +7,7 @@ const category = document.getElementById("category");
 const transactionList = document.getElementById("transactionList");
 const balanceAmount = document.getElementById("balanceAmount");
 const updateBalance = document.getElementById("updateBalance");
+const updateBalanceGroup = document.getElementById("updateBalanceGroup");
 let currentBalance = 0;
 const listArray = [];
 
@@ -15,6 +16,7 @@ updateBalance.addEventListener("click", function (d) {
     const balanceAmountValue = Number(balanceAmount.value);
     currentBalance = balanceAmountValue;
     currentBalanceNumber.textContent = "$" + `${currentBalance}`;
+    updateBalanceGroup.style.display = "none";
 })
 
 addIncome.addEventListener("click", function (e) {
