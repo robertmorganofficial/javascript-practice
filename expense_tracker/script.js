@@ -26,3 +26,13 @@ addIncome.addEventListener("click", function (e) {
     currentBalance += amountValue;
     currentBalanceNumber.textContent = "$" + `${currentBalance}`;
 })
+
+addExpense.addEventListener("click", function (f) {
+    f.preventDefault();
+    const amountValue = Number(amount.value);
+    const descriptionValue = description.value;
+    const categoryValue = category.value;
+
+    currentBalance -= amountValue;
+    currentBalanceNumber.textContent = "$" + `${currentBalance}`;
+})
