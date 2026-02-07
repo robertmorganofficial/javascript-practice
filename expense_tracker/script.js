@@ -19,13 +19,10 @@ updateBalance.addEventListener("click", function (d) {
 
 addIncome.addEventListener("click", function (e) {
     e.preventDefault();
-    const amountValue = amount.value;
+    const amountValue = Number(amount.value);
     const descriptionValue = description.value;
     const categoryValue = category.value;
 
-
-    console.log(amountValue);
-    console.log(descriptionValue);
-    console.log(categoryValue);
-    console.log("the button works!")
+    currentBalance += amountValue;
+    currentBalanceNumber.textContent = "$" + `${currentBalance}`;
 })
