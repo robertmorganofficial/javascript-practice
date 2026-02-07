@@ -26,6 +26,10 @@ body {
   border-bottom: 1px solid black;
 }
 
+#currentBalanceLabel {
+  font-size: 2em;
+}
+
 #currentBalanceNumber {
   font-size: 2em;
   font-weight: bold;
@@ -35,8 +39,6 @@ body {
 .button-container {
   margin-top: 15px;
 }
-
-
 
 .details-container {
   padding: 10px;
