@@ -11,6 +11,30 @@ const updateBalanceGroup = document.getElementById("updateBalanceGroup");
 let currentBalance = 0;
 const listArray = [];
 
+
+function displayIncome() {
+
+    transactionList.innerHTML = "";
+    listArray.forEach(transaction => {
+        const li = document.createElement("li");
+        li.textContent = ` + $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
+        transactionList.appendChild(li); 
+    });
+    
+}
+
+
+function displayExpenses() {
+
+    transactionList.innerHTML = "";
+    listArray.forEach(transaction => {
+        const li = document.createElement("li");
+        li.textContent = ` - $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
+        transactionList.appendChild(li); 
+    });
+    
+}
+ 
 updateBalance.addEventListener("click", function (d) {
     d.preventDefault();
     const balanceAmountValue = Number(balanceAmount.value);
@@ -27,6 +51,16 @@ addIncome.addEventListener("click", function (e) {
 
     currentBalance += amountValue;
     currentBalanceNumber.textContent = "$" + `${currentBalance}`;
+
+    const transaction = {
+        type: "income",
+        amount: amountValue,
+        description: descriptionValue,
+        category: categoryValue
+    }
+
+    listArray.push(transaction);
+    displayIncome();
 })
 
 addExpense.addEventListener("click", function (f) {
@@ -37,4 +71,14 @@ addExpense.addEventListener("click", function (f) {
 
     currentBalance -= amountValue;
     currentBalanceNumber.textContent = "$" + `${currentBalance}`;
+
+    const transaction = {
+        type: "expense",
+        amount: amountValue,
+        description: descriptionValue,
+        category: categoryValue
+    }
+
+    listArray.push(transaction);
+    displayExpenses();
 })
