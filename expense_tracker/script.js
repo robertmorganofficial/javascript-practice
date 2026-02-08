@@ -3,7 +3,6 @@ const addIncome = document.getElementById("addIncome");
 const addExpense = document.getElementById("addExpense");
 const amount = document.getElementById("amount");
 const description = document.getElementById("description");
-const category = document.getElementById("category");
 const transactionList = document.getElementById("transactionList");
 const balanceAmount = document.getElementById("balanceAmount");
 const updateBalance = document.getElementById("updateBalance");
@@ -18,13 +17,14 @@ function displayTranscaction() {
     listArray.forEach(transaction => {
         const li = document.createElement("li");
             if (transaction.type === "income"){
-                li.textContent = ` + $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
-                transactionList.appendChild(li); 
+                li.textContent = ` + $${transaction.amount} - ${transaction.description}`;
+                li.classList.add("transaction-income");
             } else {
-                li.textContent = ` - $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
-                transactionList.appendChild(li); 
+                li.textContent = ` - $${transaction.amount} - ${transaction.description}`;
+                li.classList.add("transaction-expense");
             }
-        
+            
+            transactionList.appendChild(li);
     });
     
 }
@@ -41,7 +41,6 @@ addIncome.addEventListener("click", function (e) {
     e.preventDefault();
     const amountValue = Number(amount.value);
     const descriptionValue = description.value;
-    const categoryValue = category.value;
 
     currentBalance += amountValue;
     currentBalanceNumber.textContent = "$" + `${currentBalance}`;
@@ -49,8 +48,7 @@ addIncome.addEventListener("click", function (e) {
     const transaction = {
         type: "income",
         amount: amountValue,
-        description: descriptionValue,
-        category: categoryValue
+        description: descriptionValue
     }
 
     listArray.push(transaction);
@@ -61,7 +59,6 @@ addExpense.addEventListener("click", function (f) {
     f.preventDefault();
     const amountValue = Number(amount.value);
     const descriptionValue = description.value;
-    const categoryValue = category.value;
 
     currentBalance -= amountValue;
     currentBalanceNumber.textContent = "$" + `${currentBalance}`;
@@ -69,8 +66,7 @@ addExpense.addEventListener("click", function (f) {
     const transaction = {
         type: "expense",
         amount: amountValue,
-        description: descriptionValue,
-        category: categoryValue
+        description: descriptionValue
     }
 
     listArray.push(transaction);

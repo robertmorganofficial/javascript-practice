@@ -135,8 +135,28 @@ select {
   background-color: #2563eb;
 }
 
+
 #transactionTitle {
+  font-size: 2em;
   text-align: center;
   margin: 0;
   padding: 20px;
+}
+
+#transactionList {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.transaction-income {
+  color: green;
+  font-weight: bold;
+}
+
+.transaction-expense {
+  color: red;
+  font-weight: bold;
 }
