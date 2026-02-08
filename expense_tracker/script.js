@@ -12,25 +12,19 @@ let currentBalance = 0;
 const listArray = [];
 
 
-function displayIncome() {
+function displayTranscaction() {
 
     transactionList.innerHTML = "";
     listArray.forEach(transaction => {
         const li = document.createElement("li");
-        li.textContent = ` + $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
-        transactionList.appendChild(li); 
-    });
-    
-}
-
-
-function displayExpenses() {
-
-    transactionList.innerHTML = "";
-    listArray.forEach(transaction => {
-        const li = document.createElement("li");
-        li.textContent = ` - $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
-        transactionList.appendChild(li); 
+            if (transaction.type === "income"){
+                li.textContent = ` + $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
+                transactionList.appendChild(li); 
+            } else {
+                li.textContent = ` - $${transaction.amount} - ${transaction.description} - ${transaction.category}`;
+                transactionList.appendChild(li); 
+            }
+        
     });
     
 }
@@ -60,7 +54,7 @@ addIncome.addEventListener("click", function (e) {
     }
 
     listArray.push(transaction);
-    displayIncome();
+    displayTranscaction();
 })
 
 addExpense.addEventListener("click", function (f) {
@@ -80,5 +74,5 @@ addExpense.addEventListener("click", function (f) {
     }
 
     listArray.push(transaction);
-    displayExpenses();
+    displayTranscaction();
 })
